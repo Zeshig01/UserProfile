@@ -30,7 +30,7 @@ const CreateProfile = () => {
     data.append('profileImage', formData.profileImage);
 
     try {
-      const response = await axios.post('http://localhost:8000/user', data);
+      const response = await axios.post('http://localhost:8000/user/postUser', data);
       setMessage('Profile created successfully!');
       setFormData({ fullname: '', email: '', profileImage: null });
       window.location.reload();

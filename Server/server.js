@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const employeeRoute=require('./routes/employeeRoute')
 const connectDB = require('./config/database');
 const userRoutes = require('./routes/userRoutes'); 
 const registerRoute=require('./routes/registerRoute')
@@ -12,8 +13,9 @@ app.use(express.json());
 // app.use(cors({ origin: 'http://localhost:5173' })); 
 app.use(cors({ origin: '*' })); // Allow all origins
 
-app.use('/', userRoutes);
-app.use('/register', registerRoute);
+app.use('/user', userRoutes);
+app.use('/auth', registerRoute);
+app.use('/auth', employeeRoute);
 
 connectDB()
 

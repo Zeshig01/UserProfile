@@ -8,10 +8,30 @@
     email: {
         type: String,
         required: true,
-        unique: true, 
-    },
+     },
     profileImage: {
         type: String, 
+    },
+    position: { 
+        type: String,
+        required: true
+    },
+    phone: {
+        type: String,
+        required: true
+    },
+    salary: {
+        type: String,
+        required: true
+    },
+    name: {
+        type: String,
+        unique: true,
+        required: true
+    },
+    fathername: {
+        type: String,
+        required: true
     },
 });
 
